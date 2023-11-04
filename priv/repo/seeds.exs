@@ -9,3 +9,5 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+GeoImporter.Importer.process("priv/data/cloud_data_dump.csv")

@@ -9,7 +9,17 @@ defmodule GEOExcercise.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      releases: releases()
+    ]
+  end
+
+  defp releases do
+    [
+      geo_excercise: [
+        include_executables_for: [:unix],
+        overlays: ["priv/data/", "bin/"]
+      ]
     ]
   end
 
